@@ -73,6 +73,7 @@ void USARTTransmitStringLn(const char *str) {
     USARTTransmitString(str);
     USARTTransmitChar('\r');
     USARTTransmitChar('\n');
+    _delay_ms(5);
 }
 
 // Вывод строки из PROGMEM
@@ -287,7 +288,7 @@ void disableWatchdog() {
 
 int main(void) {
     char buffer[20];
-    char outBuffer[50];
+    char outBuffer[80];
     char binaryAddress[9];
     char displayBuffer[21];
 
